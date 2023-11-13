@@ -1,0 +1,60 @@
+{
+	"type":"epsilon-nfa",
+	"alphabets":["a","b","c"],
+	"states": [
+		{
+			"name": "A",
+			"is_initial": true,
+			"is_final": false,
+			"is_dead": false
+		},
+		{
+			"name": "B",
+			"is_initial": false,
+			"is_final": false,
+			"is_dead": false
+		},
+		{
+			"name": "C",
+			"is_initial": false,
+			"is_final": false,
+			"is_dead": false
+
+		},
+		{
+			"name": "D",
+			"is_initial": false,
+			"is_final": true,
+			"is_dead": true
+		},
+		{
+			"name":"phi",
+			"is_initial": false,
+			"is_final": false,
+			"is_dead": true
+
+		}
+	],
+
+	"transitions":{ "A,a": "A",
+					"A,b": "phi",
+					"A,c": "phi",
+					"A,epsilon": "B,C",
+
+					"B,a": "phi",
+					"B,b": "B,D",
+					"B,c": "phi",
+					
+
+					"C,a": "phi",
+					"C,b": "phi",
+					"C,c": "C,D",
+					
+
+					"D,a": "phi",
+					"D,b": "phi",
+					"D,c": "phi",
+					"D,epsilon": "D"
+
+	}
+}
