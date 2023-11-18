@@ -1,0 +1,95 @@
+{
+	"type":"epsilon-nfa",
+	"alphabets":["a","b"],
+	"states": [
+		{
+			"name": "0",
+			"is_initial": true,
+			"is_final": false,
+			"is_dead": false
+		},
+		{
+			"name": "1",
+			"is_initial": false,
+			"is_final": false,
+			"is_dead": false
+		},
+		{
+			"name": "2",
+			"is_initial": false,
+			"is_final": false,
+			"is_dead": false
+		},
+		{
+			"name": "3",
+			"is_initial": false,
+			"is_final": false,
+			"is_dead": false
+
+		},
+		{
+			"name": "4",
+			"is_initial": false,
+			"is_final": false,
+			"is_dead": false
+		},
+		{
+			"name": "5",
+			"is_initial": false,
+			"is_final": false,
+			"is_dead": false
+		},
+		{
+			"name": "6",
+			"is_initial": false,
+			"is_final": false,
+			"is_dead": false
+		},
+		{
+			"name": "7",
+			"is_initial": false,
+			"is_final": false,
+			"is_dead": false
+		},
+		{
+			"name": "8",
+			"is_initial": false,
+			"is_final": false,
+			"is_dead": false
+		},
+		{
+			"name": "9",
+			"is_initial": false,
+			"is_final": false,
+			"is_dead": false
+		},
+		{
+			"name": "10",
+			"is_initial": false,
+			"is_final": true,
+			"is_dead": true
+		},
+		{
+			"name":"phi",
+			"is_initial": false,
+			"is_final": false,
+			"is_dead": true
+		}
+	],
+	"transitions":{ 
+		"0,epsilon": "1,7",
+
+		"1,epsilon": "2,4",
+
+		"2,a": "3",
+		"4,b": "5",
+
+		"3,epsilon":"6",
+		"5,epsilon":"6",
+
+		"6,epsilon":"1,7",
+		"7,a":"8",
+		"8,b":"9",
+		"9,b":"10"
+	}
+}
